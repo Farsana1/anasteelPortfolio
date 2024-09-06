@@ -1,0 +1,255 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Matemasie", sans-serif;
+}
+#container{
+    width: 100%;
+    height: 100vh;
+    position: relative;  
+    /*position:relative positioned related to  normal position 
+    position: absolute related to parent tag which have relative position */
+}
+#navbar{
+    /* flex applicable to child */
+    display: flex;
+    width: 85%;
+    margin-left: 100px;  
+    /* to make space between img and list */
+    justify-content: space-between;
+    /* to place content exactly vertically centered */
+    align-items: center;
+}
+
+#main-img{
+    width: 130px;
+    height: 130px;
+}
+.listItem{
+    /*to make inline by creating space instead float will not create any space they overlap  */
+    display: inline-block;
+    margin: 10px 20px;
+    /* remove dots in list */
+    list-style: none;
+}
+/* descendant selector */
+.listItem a{
+    text-decoration: none;
+    color: black;
+    /* above 600 font weight they all are bold */
+    font-weight: 700;
+    /* pseudo class: define special state of an element */
+}
+ /* pseudo class: define special state of an element */
+.listItem a:hover{
+    color: brown;
+}
+#main{
+    align-items: center;
+    /* justify-content: space-between; */
+    margin-top: 13%;
+    margin-left: 8%;
+}
+#head1{
+    font-weight: 700;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+#main1 p{
+    margin-bottom: 20px;
+}
+#lname{
+    color: orange;
+}
+#main a{
+    margin-left: 15px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+    border-radius: 7px;
+}
+#main2{
+    width: 45%;
+    /* absolute to relative position that is container that is full screen */
+    position: absolute;
+    bottom: 0px;
+    /* right means from right of container */
+    right: 0px;
+    height: 90%;
+}
+.imggroup{
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    /* this translate is used here to nullify */
+    transform: translateX(-50%);
+    right: 0px;
+    height: 85%;
+    bottom: 0px;
+    transition: bottom 4s, left 2s;
+}
+#main2:hover #girly{
+    left:40%;
+}
+#main2:hover #shape{
+    bottom:70px;
+}
+/* about section */
+#about{
+    margin: 13% 8% 0% 8%;
+}
+.heading{ 
+    text-align: center;
+}
+.heading h1{
+    font-size: 30px;
+}
+.heading span{
+    font-size: 20px;
+    font-weight: 200px;
+    color: green;
+}
+#group{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 4rem;
+    margin-top: 2rem;
+}
+.img img{
+    width: 80%;
+}
+#cnt p{
+    font-size: 20px;
+    /*to align all lines  */
+    text-align: justify;
+}
+#details{
+    margin-top: 2rem;
+}
+.info-box{
+    margin: 1rem 0;
+}
+.info-box span{
+    margin-left: 1rem;
+    font-size: 20px;
+}
+/* skill section */
+
+#skills{
+    margin:8% 8% 4% 8%;
+}
+#skill-group{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 4rem;
+    margin-top: 2rem;
+}
+#skill-image img{
+    width: 100%;
+}
+.progressbar-cnt{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 20px 0;
+    margin-top: 18px;
+}
+.basebar{
+    width: 100%;
+    background-color: black;
+    height: 0.5rem;
+    border-radius: 0.5rem;
+    position: absolute;
+    bottom: 0;
+
+}
+.progressbar-cnt span{
+    font-size: 20px;
+    font-weight: 600;
+}
+#html-bar{
+    background-color: orange;
+    width: 95%;
+}
+#css-bar{
+    background-color: orange;
+    width: 88%;
+}
+#js-bar{
+    background-color: orange;
+    width: 89%;
+}
+#react-bar{
+    background-color: orange;
+    width: 85%;
+}
+
+/* contact section */
+
+#icons{
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icons, #arrow{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px;
+    border-radius: 50%;
+}
+.icons:hover{
+    background-image: linear-gradient(to bottom right,yellow,rgb(192, 132, 22));
+}
+ .icons a{
+    color: black;
+ } 
+ #icons :hover a{
+    color: white;
+ }  
+ /* animations */
+ .icons i:hover{
+        animation: shake .9s;
+ }
+ /* define animation */
+ @keyframes shake {
+    10%{
+        transform: rotate(50deg);
+    }
+    20%{
+        transform: rotate(-15deg);
+
+    }
+    30%{
+        transform: rotate(15deg);
+
+    }
+    40%{
+        transform: rotate(-15deg);
+
+    }
+ }
+ /* footer section */
+ footer{
+    padding: 3rem 0;
+ }
+ footer p{
+    text-align: center;
+    font-weight: 600;
+ }
+ #arrow{
+    background-image: linear-gradient(to bottom right,yellow,rgb(192, 132, 22));
+    float: right;
+ }
+ #arrow:hover a{
+    color:white;
+ }
+html{
+    scroll-behavior: smooth;
+}
